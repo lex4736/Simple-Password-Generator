@@ -1,41 +1,42 @@
-// Assignment Code
+// Links the script to the unique ID tag "generate password button" in html
 let generateBtn = document.querySelector("#generate");
 
 
-//Write password to the #password input
+// initiates the script that allows the next step
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
 
-//Prompts after clicking generate password button
+// Generates a series of prompt selections for the user that will personalize the generation of the password based on choices slected
+
 
 function generatePassword() {
   
-  let passwordLength = prompt("Please select desired password lengt. Must be between 8 - 128");
+  let passwordLength =parseInt(prompt("Please select desired password lenght.Password must be between 8 - 128"));
 
-  while(passwordLength < 8 || passwordLength > 128) {
-    alert("You must choose between 8 and 128");
-    passwordLength = prompt("Please enter password length. Select between 8 and 128");
+  while(passwordLength < 8 || passwordLength > 128 || isNaN(length)) {
+    alert("Selection does not meet required parameters. Please try again");
+    passwordLength =prompt("Please select a number between 8 - 128");
   }
 
-  let lowerCases = confirm("Do you want lower cases in your password?");
+  let lowerCases = confirm("Would you like lower cases in your password?");
 
-  let upperCases = confirm("Do you want upper cases in your password?");
+  let upperCases = confirm("Would you like upper cases in your password?");
 
-  let numbers = confirm("Do you want numbers in your password?");
+  let numbers = confirm(" Would you like numbers in your password?");
 
-  let special = confirm("Do you want special characters in your password?");
+  let special = confirm(" Would you like special characters in your password?");
+  
+  
 
-
-  //Check to make sure user selects okay for all choices and uses empty minimums from above
+  // Once the user has completed setting the criteria's above for their desired password, the script will use the array below to generate a unique password per the user's selection
 let characters = [];
 
 let numbersarray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-  if (numbers) {
+ if (numbers) {
     characters= characters.concat(numbersarray); 
   }
 
@@ -67,5 +68,5 @@ let lowers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "
   return randomPasswordGenerated;
 
 }
-// Add event listener to generate button
+// Adds an event listener to generate button
 generateBtn.addEventListener("click", writePassword);
