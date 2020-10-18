@@ -10,8 +10,8 @@ A simple javascript driven webpage to assist you with creating a unique secure p
 - Updated non semantic html codes to semantic codes 
 
 <---CSS CHANGES --->
--Changed styling of button
--Changed Text colors-
+- Changed styling of button
+- Changed Text colors-
 
 <---JAVASCRIPT CHANGES --->
 - Added a document query selector that links the scripts to the unique generate password button in the html
