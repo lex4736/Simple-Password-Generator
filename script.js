@@ -12,7 +12,6 @@ function writePassword() {
 
 // Generates a series of prompt selections for the user that will personalize the generation of the password based on choices slected
 
-
 function generatePassword() {
   
   let passwordLength =parseInt(prompt("Please select desired password lenght.Password must be between 8 - 128"));
