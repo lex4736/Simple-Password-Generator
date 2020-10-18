@@ -9,11 +9,11 @@ A simple javascript driven webpage to assist you with creating a unique secure p
 <---HTML CHANGES --->
 - Updated non semantic html codes to semantic codes 
 
-<-- CSS CHANGES -->
+<---CSS CHANGES --->
 -Changed styling of button
 -Changed Text colors-
 
-<-- jAVASCRIPT CHANGES -->
+<---JAVASCRIPT CHANGES --->
 - Added a document query selector that links the scripts to the unique generate password button in the html
 - Added a fuction to generate user prompts for desired password selection 
 - Added password parameters and an index of arrays that the script will use the generate a unique password per the user's selection
